@@ -1,28 +1,44 @@
 import turtle as trtl
-import random
+trtl.bgcolor("lightblue")
+trtl.speed(0)
 
-
-colors = ["white", "red", "pink", "purple", "blue", "yellow", "orange", "black", "green"]
-p = trtl.Turtle()
-p.speed(0)
-p.hideturtle()
-p.pensize(4)
-center_lines = 4
-
-def draw_lines(x, y):
+# code for spiderman face
+def draw_spiderman_face():
+    p = trtl.Turtle()
     p.penup()
-    x = 0
-    y = 0
-    p.goto(x, y)
+    p.goto(-10, 0)
     p.pendown()
-    for lines in range(center_lines):
-        color = random.choice(colors)
-        p.color(color)
-        p.forward(200)
-        p.backward(200)
-        p.right(60)
+    p.color("red")
+    p.begin_fill()
+    p.setheading(0)
+    p.end_fill()
 
-draw_lines(0, 0)
+def spiderman_eyes(x, y):
+    p = trtl.Turtle()
+    x = 200
+    y = 200
+    p.penup()
+    p.goto(x, y)
 
-wn = trtl.Screen()
-wn.mainloop()
+# code for batman face
+def draw_batman_face():
+    p = trtl.Turtle()
+    p.penup()
+
+
+def main():
+    faces_upper = ["Spiderman", "Batman"]
+    faces_lower = ["spiderman", "batman"]
+    print("The available faces that I can draw are", faces_upper, "or", faces_lower)
+    print("Please type your input exactly how it is in the list")
+
+
+    face_input = input("What face do you want me to draw? :")
+    if face_input in faces_upper or face_input in faces_lower:
+        if face_input == "Spiderman" or face_input == "spiderman":
+            draw_spiderman_face()
+        elif face_input == "Batman" or face_input == "batman":
+            draw_batman_face
+
+if __name__ == "__main__":
+    main()
