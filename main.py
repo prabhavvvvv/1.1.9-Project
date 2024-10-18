@@ -125,7 +125,9 @@ def main():
                 print("Now drawing Spiderman...")
                 draw_spiderman()
                 break
-            elif "batman" in face_input
+            elif "batman" in face_input:
+                print("Now drawing Batman...")
+                """draw_batman()"""
             else:
                 print("Please enter a valid input")
 
