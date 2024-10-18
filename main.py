@@ -39,11 +39,7 @@ def web():
         p.up()
         p.goto(0, 0)
 
-    for r in range(20, 201, 20):
-        p.down()
-        p.circle(r)
-        p.up()
-
+    
 def draw_spiderman():
     turn_right(45)
     up()
