@@ -29,7 +29,6 @@ def teleport(x,y):
 def web():
     p.pencolor("black")
     p.width(1)
-    p.hideturtle()
     for angle in range(0, 360, 15):
         p.setheading(angle)
         p.up()
@@ -105,7 +104,7 @@ def draw_spiderman():
     #ends here
 
 def draw_iron_man(x, y, color):
-    p.hideturtle()
+    #head
     turn_right(45)
     up()
     teleport(x, y)
@@ -118,7 +117,13 @@ def draw_iron_man(x, y, color):
     turn_left(135)
     p.end_fill()
 
-    p.penup()
+    up()
+    teleport(-90, 95)
+    p.fillcolor("yellow")
+    p.begin_fill()
+    p.pencolor("yellow")
+
+    up()
     teleport(-90, 95)
     p.fillcolor("yellow")
     p.begin_fill()
@@ -127,10 +132,55 @@ def draw_iron_man(x, y, color):
     r = 6
     circ(r, 20)
     p.setheading(45)
-    p.pendown()
+    down()
     p.pensize(5)
     move(60)
+    turn_right(90)
+    p.setheading(-80)
+    move(80)
+    turn_left(90)
+    p.setheading(0)
+    move(50)
     turn_right(-90)
+    p.setheading(80)
+    move(80)
+    turn_right(90)
+    p.setheading(-45)
+    move(60)
+    p.right(30)
+    circ(50, 50)
+    turn_right(90)
+    circ(50, 50)
+    p.setheading(0)
+    turn_right(90)
+    circ(-40, 50)
+    turn_right(90)
+    turn_right(-90)
+    circ(60, 70)
+    turn_right(-90)
+    turn_right(90)
+    turn_right(90)
+    circ(60, 70)
+    turn_left(-90)
+    move(50)
+    circ(-50, 50)
+
+    # eyes
+    up()
+    teleport(-90, 50)
+    p.pencolor("black")
+    turn_right(150)
+    p.fillcolor("white")
+    p.begin_fill()
+
+    move(40)
+    turn_right(45)
+
+    circ(-20, 90)
+
+    move(40)
+    turn_right(45)
+    p.end_fill()
 
 def main():
     faces_upper = ["Spiderman", "Iron Man"] 
