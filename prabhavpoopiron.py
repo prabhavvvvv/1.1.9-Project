@@ -166,21 +166,57 @@ def draw_iron_man(x, y, color):
     circ(-50, 50)
 
     # eyes
+
+    # right eye
     up()
-    teleport(-90, 50)
+    teleport(-90, 20)
     p.pencolor("black")
     turn_right(150)
-    p.fillcolor("white")
+    p.color("black")
+    down()
+    p.circle(200, 45)
+    p.fillcolor("cyan")
     p.begin_fill()
-
-    move(40)
-    turn_right(45)
-
-    circ(-20, 90)
-
-    move(40)
-    turn_right(45)
+    turn_right(90)
+    move(10)
+    turn_right(80)
+    move(30)
+    turn_left(-45)
+    move(30)
+    turn_left(-60)
+    move(5)
     p.end_fill()
+
+    # left eye
+    up()
+    teleport(-90, 20)
+    p.fillcolor("cyan")
+    p.begin_fill()
+    turn_left(190)
+    down()
+    move(10)
+    turn_right(-30)
+    move(35)
+    turn_right(-60)
+    move(24)
+    p.end_fill()
+
+    # mouth
+    up()
+    teleport(-65, -80)
+    p.pencolor("black")
+    turn_right(80)
+    down()
+    move(15)
+    turn_right(-100)
+    move(15)
+    turn_right(60)
+    p.setheading(0)
+    move(60)
+    turn_right(50)
+    move(15)
+    turn_right(-90)
+    move(15)
 
 def main():
     faces_upper = ["Spiderman", "Iron Man"] 
@@ -193,11 +229,13 @@ def main():
          
         if face_input in faces_upper or face_input in faces_lower:
             if "spiderman" in face_input:
-                print("Now drawing Spiderman...")
+                print("Now drawing Spider-Man...")
+                print("Fun fact: Spider-Man is the youngest superhero ever")
                 draw_spiderman()
                 break
             elif "iron man" in face_input:
-                print("Now drawing Iron Man...")
+                print("Now drawing Iron Man..." )
+                print("Fun fact: Iron Man actually fought a dragon")
                 draw_iron_man(x = -75, y = -125, color="red")
                 break
             else:
