@@ -103,14 +103,25 @@ def draw_spiderman():
     
     #ends here
 
-def draw_iron_man(x, y, color):
+def draw_iron_man(x, y):
     #head
+    head_colors = ["red", "green", "blue", "orange"]
+    print(head_colors)
+    while True:
+        color_input = input("What color do you want Iron Man's head to be?: ").lower()
+        if color_input in head_colors:
+            print("Now drawing", color_input, "Iron Man...")
+            break
+        else:
+            print("Invalid color, please try again")
+
     turn_right(45)
     up()
     teleport(x, y)
     down()
-    p.fillcolor(color)
+    p.fillcolor(color_input)
     p.begin_fill()
+
     for i in range(2):
         circ(100, 90)
         circ(200, 90) 
@@ -205,6 +216,7 @@ def draw_iron_man(x, y, color):
     up()
     teleport(-65, -80)
     p.pencolor("black")
+    p.pensize(7)
     turn_right(80)
     down()
     move(15)
@@ -218,25 +230,39 @@ def draw_iron_man(x, y, color):
     turn_right(-90)
     move(15)
 
+    up()
+    teleport(-90, 95)
+    p.fillcolor("yellow")
+    p.pencolor("yellow")
+    p.pensize(5)
+    p.begin_fill()
+    down()
+    turn_right(180)
+    p.setheading(225)
+    move(30)
+    turn_right(-80)
+    move(30)
+    circ(-40, 30)
+    circ(-40, -30)
+    turn_left(-40)
+    move(10)
+    
 def main():
-    faces_upper = ["Spiderman", "Iron Man"] 
-    faces_lower = ["spiderman", "iron man"]
-    print("The available faces that I can draw are", faces_upper, "or", faces_lower)
+    avengers_upper = ["Spiderman", "Iron Man"] 
+    avengers__lower = ["spiderman", "iron man"]
+    print("The available avengers that I can draw are", avengers_upper, "or", avengers__lower)
     print("Please type your input exactly how it is in the list")
     while True:
-        face_input = input("What do you want to draw?: ")
-        face_input = face_input.lower()
+        avenger = input("What do you want me to draw?: ").lower()
          
-        if face_input in faces_upper or face_input in faces_lower:
-            if "spiderman" in face_input:
+        if avenger in avengers_upper or avenger in avengers__lower:
+            if "spiderman" in avenger:
                 print("Now drawing Spider-Man...")
                 print("Fun fact: Spider-Man is the youngest superhero ever")
                 draw_spiderman()
                 break
-            elif "iron man" in face_input:
-                print("Now drawing Iron Man..." )
-                print("Fun fact: Iron Man actually fought a dragon")
-                draw_iron_man(x = -75, y = -125, color="red")
+            elif "iron man" in avenger:
+                draw_iron_man(x = -75, y = -125)
                 break
             else:
                 print("Please enter a valid input")
