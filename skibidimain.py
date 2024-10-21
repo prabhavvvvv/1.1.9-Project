@@ -173,7 +173,7 @@ def spider_man(color):
     circ(160*5/7,51.75)
 
     p.end_fill()
-    p.hideturte()
+    p.hideturtle()
 
 def draw_iron_man(x, y):
     #head
