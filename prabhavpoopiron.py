@@ -267,7 +267,7 @@ def main():
     print("Please type your input exactly how it is in the list")
     while True:
         avenger = input("What do you want me to draw?: ").lower()
-         if avenger in avengers_upper or avenger in avengers__lower:
+        if avenger in avengers_upper or avenger in avengers__lower:
             if "spiderman" in avenger:
                 print("Now drawing Spider-Man...")
                 print("Fun fact: Spider-Man is the youngest superhero ever")
