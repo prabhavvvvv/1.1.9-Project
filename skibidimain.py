@@ -39,13 +39,10 @@ def spider_man(color):
     turn_left(135)
     p.end_fill()
 
-    #web face
-    #positioning
     up()
     teleport(0,0)
     down()
 
-    #face straight lines
     p.pencolor("black")
     for i in range(12):
         p.setheading(-90)
@@ -55,7 +52,6 @@ def spider_man(color):
         turn_left(30*(i-1))
         move(200)
 
-    #web face curved lines
     up()
     teleport(-7.5,15)
     down()
@@ -81,8 +77,6 @@ def spider_man(color):
             teleport(62.5,125)
             down()
 
-    #left_eye
-    #outer eye
     p.pencolor("white")
     up()
     teleport(-100,-125)
@@ -107,8 +101,6 @@ def spider_man(color):
 
     p.end_fill()
 
-
-    #inner eye
     up()
     teleport(x+12.5,y-25)
     turn_left(125)
@@ -127,11 +119,8 @@ def spider_man(color):
     circ(160*5/7,-51.25)
 
     p.end_fill()
-    #ends here
+    
 
-
-    #right eye
-    #outer eye
     up()
     teleport(88,125)
     down()
@@ -152,7 +141,7 @@ def spider_man(color):
     circ(160,52)
     p.end_fill()
 
-    #inner eye
+    
     up()
     teleport(x2-12.5,y2-25)
     down()
@@ -176,7 +165,6 @@ def spider_man(color):
     p.hideturtle()
 
 def draw_iron_man(x, y):
-    #head
     head_colors = ["red", "green", "blue", "orange"]
     print(head_colors)
 
@@ -261,9 +249,6 @@ def draw_iron_man(x, y):
     move(50)
     circ(-50, 50)
 
-    # eyes
-
-    # right eye
     up()
     teleport(-90, 20)
     p.pencolor("black")
@@ -283,7 +268,6 @@ def draw_iron_man(x, y):
     move(5)
     p.end_fill()
 
-    # left eye
     up()
     teleport(-90, 20)
     p.fillcolor("cyan")
@@ -297,7 +281,6 @@ def draw_iron_man(x, y):
     move(24)
     p.end_fill()
 
-    # mouth
     up()
     teleport(-65, -80)
     p.pencolor("black")
