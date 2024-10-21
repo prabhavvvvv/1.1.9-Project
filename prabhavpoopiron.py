@@ -45,7 +45,7 @@ def draw_spiderman():
     teleport(-75,-125)
     down()
     p.fillcolor("red4")
-    p.begin_fill()
+    p.begin_fill
     for i in range(2):
         circ(100, 90)
         circ(200, 90) 
@@ -107,6 +107,16 @@ def draw_iron_man(x, y):
     #head
     head_colors = ["red", "green", "blue", "orange"]
     print(head_colors)
+
+    new_color = "purple"
+    head_colors.append(new_color)
+    print(f"{new_color} has been added to the list. The current colors now are {head_colors}.")
+
+    if len(head_colors) > 4:
+        print("There are already enough colors in the list")
+    else:
+        head_colors.append("pink")
+
     while True:
         color_input = input("What color do you want Iron Man's head to be?: ").lower()
         if color_input in head_colors:
@@ -114,6 +124,9 @@ def draw_iron_man(x, y):
             break
         else:
             print("Invalid color, please try again")
+    
+    if color_input in head_colors:
+        pass
 
     turn_right(45)
     up()
@@ -246,7 +259,7 @@ def draw_iron_man(x, y):
     circ(-40, -30)
     turn_left(-40)
     move(10)
-    
+
 def main():
     avengers_upper = ["Spiderman", "Iron Man"] 
     avengers__lower = ["spiderman", "iron man"]
