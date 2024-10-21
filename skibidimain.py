@@ -368,7 +368,9 @@ def main(args):
                 print("Please enter a valid input")
 
 if __name__ == "__main__":
-    main()
-
+    import sys
+    main(sys.argv[1:])
+    
 wn = trtl.Screen()
 wn.mainloop()
+
