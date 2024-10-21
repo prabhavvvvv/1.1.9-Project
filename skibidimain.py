@@ -361,6 +361,7 @@ def main(args):
                     if user_color in colors:
                         spider_man(user_color)
                         break
+                break
             elif "iron man" in avenger:
                 draw_iron_man(x = -75, y = -125)
                 break
@@ -373,4 +374,3 @@ if __name__ == "__main__":
     
 wn = trtl.Screen()
 wn.mainloop()
-
